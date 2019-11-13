@@ -1,4 +1,5 @@
 import React ,{Component} from 'react'
+import { Link } from 'react-router-dom';
 import {
     HeaderWrapper,
     Logo,
@@ -25,7 +26,9 @@ class Header extends  Component {
         const { foused, inputFouse,show, inputBlur,inputValue ,inputChange} = this.props;
         return(
             <HeaderWrapper>
+                <Link to='/'>
                 <Logo></Logo>
+                </Link>
                 <Nav>
                     <NavItem className='active'>首页</NavItem>
                     <NavItem>下载</NavItem>
@@ -42,7 +45,9 @@ class Header extends  Component {
                         {this.getList(show)}
                     </SearchWrapper>
                     <NavItem>Aa</NavItem>
+                    <Link to='/login'>
                     <NavItem>登录</NavItem>
+                    </Link>
                 </Nav>
                 <Addition>
                     <Button className='writting'>
@@ -74,7 +79,8 @@ const mapStateToProps = (state) => {
     return {
         foused: state.header.get('foused'),
         show:state.header.get('show'),
-		list: state.header.get('list'),
+        list: state.header.get('list'),
+        page:state.header.get('page')
     }
   }
 //   需要改变的方法  派发给redux

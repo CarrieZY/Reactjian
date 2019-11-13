@@ -8,7 +8,7 @@ import axios from 'axios'
 export const changLIst=(data)=>({
     type:constants.CHANGE_LIST,
     data:fromJS(data),//当列表的数据过多的时候 前端需要做分页处理
-    page:Math.ceil(data.length / 10)   //函数返回大于或等于一个给定数字的最小整数。
+    totalPage:Math.ceil(data.length / 10)   //函数返回大于或等于一个给定数字的最小整数。
 })
 export const SearchInput=()=>({
     type:constants.SEARCH_FOCUS

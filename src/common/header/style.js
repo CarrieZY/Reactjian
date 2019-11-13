@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logopic from '../../static/logo.png'
+import logoPic from '../../static/logo.png'
  
 export const HeaderWrapper = styled.div`
   height: 56px;
@@ -9,21 +9,25 @@ export const HeaderWrapper = styled.div`
   flex-flow:row;
 `;
 
-export const Logo  = styled.a `
-    margin-left:10%;
-    width: 100px;
-    height: 56px;
-    background: url(${logopic});
-    background-size: contain;
-`
+export const Logo = styled.div`
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100px;
+	height: 56px;
+	background: url(${logoPic});
+	background-size: contain;
+`;
 
-export const Nav=styled.div`
-    flex:1;
-    height: 100%;
-    margin: 0 auto;
-    display:flex;
-    flex-flow:row;
-`
+export const Nav = styled.div`
+	width: 960px;
+	height: 100%;
+	padding-right: 70px;
+	box-sizing: border-box;
+  margin: 0 auto;
+  display:flex;
+`;
 export const NavItem=styled.div`
     line-height: 56px;
     padding: 0 15px;

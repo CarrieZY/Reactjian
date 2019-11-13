@@ -16,11 +16,11 @@ export default(state=defaultState,action)=>{
         case constants.SEARCH_FOCUS:
             return state.merge({'foused':true,'show':true});
         case constants.SEARCH_BLUR:
-            return state.merge({'foused':false,show:false});  
+            return state.merge({'foused':false,'show':false});  
         case constants.SEARCH_CHANGE:
             return state.set('inputValue',action.value);
         case constants.CHANGE_LIST:
-            return state.set('list',action.data).set('totalPage',action.page)    
+            return state.set('list',action.data).set('totalPage',action.totalPage)    
         default:
             return state;        
     }
